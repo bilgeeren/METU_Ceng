@@ -1,0 +1,1 @@
+([(Hunter {hID = 1, hlevel = Expert, hEnergy = 97, hNumberOfCatches = 0, hActions = []},(2,0))],[(Prey {pID = 2, pEnergy = 0, pActions = []},(1,0))])

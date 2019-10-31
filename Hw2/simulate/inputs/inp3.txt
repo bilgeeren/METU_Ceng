@@ -1,0 +1,1 @@
+simulate [[O,O,P (Prey 5 12 [S]),P (Prey 4 48 [S]),O],[H (Hunter 2 Intermediate 13 2 [E]),P (Prey 6 62 [W]),T,O,H (Hunter 1 Intermediate 98 5 [W])],[O,P (Prey 3 16 [E]),P (Prey 1 14 [N]),O,O]]

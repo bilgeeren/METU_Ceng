@@ -1,0 +1,1 @@
+simulate [[H (Hunter 1 Intermediate 16 2 [E,S,S]),P (Prey 2 14 [W,S,S]),P (Prey 1 40 [S,S,W])],[T,O,O],[O,T,O]]

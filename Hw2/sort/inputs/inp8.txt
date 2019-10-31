@@ -1,0 +1,1 @@
+sort [Hunter 1 Expert 100 5 [S], Hunter 3 Newbie 90 3 [W], Hunter 9 Intermediate 100 5 [E], Hunter 13 Newbie 87 3 [N], Hunter 2 Intermediate 10 0 [W], Hunter 7 Expert 100 15 [E]]
