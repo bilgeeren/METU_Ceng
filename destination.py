@@ -18,6 +18,6 @@ def listener(hostIp,hostPort):
 					print(time[0])
 					break
 
-
 	s.close()
+
 

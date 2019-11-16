@@ -1,6 +1,7 @@
 import socket
 import time
 import struct
+import threading
 
 def listener(hostIp,hostPort):
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -18,8 +19,8 @@ def listener(hostIp,hostPort):
 					print(time[0])
 					break
 
-
 	s.close()
+
 
 
 def sender(destinationIp,destPort):
@@ -38,3 +39,12 @@ def sender(destinationIp,destPort):
 
 	s.close()
 
+
+if __name__ == '__main__':
+	listenSource = threading.Thread(target=listener, args=("10.10.8.2", 4042))
+
+	listenSource.start()
+
+	listenSource.join()
+
+	exit(0)
