@@ -9,7 +9,8 @@ def listener(hostIp,hostPort):
 	s.bind((hostIp, hostPort))
 
 	myStruct = struct.Struct('f')
-	while 1:
+	i=0
+	while i<100:
 		data = s.recvfrom(1024)
 		if data:
 			s.sendto(b'received', data[1])
@@ -18,6 +19,7 @@ def listener(hostIp,hostPort):
 				if time:
 					time = struct.unpack('f', time[0])
 					print(time[0])
+					i+=1
 					break
 
 
