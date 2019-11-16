@@ -41,16 +41,16 @@ def sender(destinationIp,destPort):
 
 
 if __name__ == '__main__':
-	listenSource = threading.Thread(target=listener, args=("10.10.1.2", 4041))
-	r2Sender = threading.Thread(target=sender, args=("10.10.8.2", 4042))
-	#dSender = threading.Thread(target=sender, args("10.10.4.2"), 4043)
+	listenSource = threading.Thread(target=listener, args=("10.10.1.2", 1041)) #need to keep record
+	r2Sender = threading.Thread(target=sender, args=("10.10.8.2", 4041)) #need to keep record
+	dSender = threading.Thread(target=sender, args = ("10.10.4.2", 3041)) #need to keep record
 
 	listenSource.start()
 	r2Sender.start()
-	#d2Sender.start()
+	dSender.start()
 
 	listenSource.join()
 	r2Sender.join()
-	#d2Sender.join()
+	dSender.join()
 
 	exit(0)

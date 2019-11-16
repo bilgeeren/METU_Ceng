@@ -1,0 +1,11 @@
+e2171585@pc2.lan.sdn.uky.edu
+
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29211 python -u - < router1.py
+
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29212 python -u - < router2.py
+
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29213 python -u - < router3.py
+
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29214 python -u - < source.py
+
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29210 python -u - < destination.py

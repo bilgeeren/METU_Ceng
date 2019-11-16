@@ -1,6 +1,8 @@
 import socket
 import time
 import struct
+import threading
+
 
 def sender(destinationIp,destPort):
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -20,4 +22,16 @@ def sender(destinationIp,destPort):
 	s.close()
 
 if __name__ == '__main__':
-	sender("10.10.1.2", 4041)	
+	senderR1 = threading.Thread(target=sender, args=("10.10.1.2", 1041)) 
+	senderR2 = threading.Thread(target=sender, args=("10.10.2.1", 1042)) 
+	senderR3 = threading.Thread(target=sender, args=("10.10.3.2", 1043))
+
+	senderR1.start()
+	senderR2.start()
+	senderR3.start()
+
+	senderR1.join()
+	senderR2.join()
+	senderR3.join()
+
+	exit(0)
