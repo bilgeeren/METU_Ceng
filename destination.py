@@ -1,6 +1,5 @@
 import socket
 import time
-import struct
 import threading
 
 
@@ -8,19 +7,14 @@ def listener(hostIp,hostPort):
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	s.bind((hostIp, hostPort))
 
-	myStruct = struct.Struct('f')
 	i=0
 	while i<100:
 		data = s.recvfrom(1024)
+		print(data)
+		print(i)
 		if data:
 			s.sendto(b'received', data[1])
-			while 1:
-				time = s.recvfrom(1024)
-				if time:
-					time = struct.unpack('f', time[0])
-					print(time[0])
-					i+=1
-					break
+			i+=1
 
 	s.close()
 
@@ -39,3 +33,4 @@ if __name__ == '__main__':
 	listenR3.join()
 
 	exit(0)
+

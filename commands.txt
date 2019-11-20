@@ -1,11 +1,20 @@
-e2171585@pc2.lan.sdn.uky.edu
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171726@pc3.instageni.cs.princeton.edu -p 26414 python -u - < source.py
 
-ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29211 python -u - < router1.py
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171726@pc3.instageni.cs.princeton.edu -p 26410 python -u - < destination.py
 
-ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29212 python -u - < router2.py
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171726@pc3.instageni.cs.princeton.edu -p 26412 python -u - < router2.py
 
-ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29213 python -u - < router3.py
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171726@pc3.instageni.cs.princeton.edu -p 26411 python -u - < router1.py
 
-ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29214 python -u - < source.py
+ssh -i ~/.ssh/id_geni_ssh_rsa e2171726@pc3.instageni.cs.princeton.edu -p 26413 python -u - < router3.py
 
-ssh -i ~/.ssh/id_geni_ssh_rsa e2171585@pc2.lan.sdn.uky.edu -p 29210 python -u - < destination.py
+
+sudo fuser -k 8080/udp
+sudo fuser -k 4041/udp
+sudo fuser -k 4042/udp
+sudo fuser -k 3042/udp
+sudo fuser -k 3041/udp
+sudo fuser -k 3043/udp
+sudo fuser -k 1024/udp
+sudo fuser -k 1041/udp
+
