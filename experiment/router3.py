@@ -18,16 +18,24 @@ def sender(destinationIp,destPort):
 			if data:
 				end = time.time()
 				rtt = end-start
-				if(destPort == 1043):
-					sTimes.append(rtt)
-				if(destPort == 3043):
-					dTimes.append(rtt)
-				if(destPort == 8080):
-					r2Times.append(rtt)
 				i+=1
 				break
 
 	s.close()
+ 
+ def listener(hostIp,hostPort):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.bind((hostIp, hostPort))
+
+    i=0
+    while i<100:
+        data = s.recvfrom(1024)
+        print(data)
+        print(i)
+        if data:
+            s.sendto(b'received', data[1])
+            i+=1
+    s.close()
 
 def findAverage(l):
 	total = 0
@@ -37,33 +45,13 @@ def findAverage(l):
 
 
 if __name__ == '__main__':
-	sSender = threading.Thread(target=sender, args=("10.10.3.1", 1043))  #need to keep record
-	dSender = threading.Thread(target=sender, args=("10.10.7.1", 3043)) #need to keep record
-	r2Sender = threading.Thread(target=sender, args=("10.10.6.1", 8080)) #need to keep record
+	sListener = threading.Thread(target=listener, args=("10.10.3.2", 1043))
+	dSender = threading.Thread(target=sender, args=("10.10.7.1", 3043))
 
-	sSender.start()
+	sListener.start()
 	dSender.start()
-	r2Sender.start()
 
-	sSender.join()
+	sListener.join()
 	dSender.join()
-	r2Sender.join()
-
-
-	with open('link_costs.txt', 'w') as f:
-		f.write("router3-source\n")
-		for item in sTimes:
-			f.write("%s\n" % item)
-		f.write("avg = %s\n" % findAverage(sTimes))
-
-		f.write("router3-destination\n")
-		for item in dTimes:
-			f.write("%s\n" % item)
-		f.write("avg = %s\n" % findAverage(dTimes))
-
-		f.write("router3-router2\n")
-		for item in r2Times:
-			f.write("%s\n" % item)
-		f.write("avg = %s\n" % findAverage(r2Times))
 
 	exit(0)
