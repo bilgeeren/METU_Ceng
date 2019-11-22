@@ -22,3 +22,7 @@ In experiment part:
     To accomplish the experiment, you should run destination.py on destination node and router3.py on r3 node.
     As a last step, you should run source.py on source node. Then the destination node will print timestamps, average 
     and error rate.
+
+Authors: 
+Gurkan Kisaoglu 2171726
+Bilge Eren 2171585
