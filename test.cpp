@@ -7,28 +7,27 @@
 #include "the3.h"
 
 
-void printVector(std::vector<int>& array){
+// void printVector(std::vector<int>& array){
 
-    std::cout << "size: " << array.size() << std::endl;
-    for (unsigned i = 0; i < array.size(); ++i){
-        std::cout << array[i] << " ";
-    }
-    std::cout << std::endl;
-}
-
-
+//     std::cout << "size: " << array.size() << std::endl;
+//     for (unsigned i = 0; i < array.size(); ++i){
+//         std::cout << array[i] << " ";
+//     }
+//     std::cout << std::endl;
+// }
 
 
+
+using namespace std;
 bool TestTask()
 {
     
- Test testVar = Test();
     // time variables
   clock_t begin;
   clock_t end;
   double duration;
   int expectedTime = 500;
-  int true_answer = 2;
+  int true_answer = 3;
   int solution = -1;
   
     // generate solution
@@ -38,12 +37,12 @@ bool TestTask()
       double *scores = new double[6];
       int **edgeList;
       edgeList = new int*[6];
-     int edgelist[6][6] = {0, 0, 2, 5, 3,0,
-                          0, 0, 0, 2, 3, 0,
-                          2, 0, 0, 1, 0, 0,
-                          5, 2, 1, 0, 4, 0,
-                          3, 3, 0, 4, 0, 0,
-                          0, 0, 0, 0, 0, 0};
+     int edgelist[6][6] = {0, 0, 1, 0, 10,3,
+                          0, 0, 0, 0, 0, 0,
+                          1, 0, 0, 0, 8, 9,
+                          0, 0, 0, 0, 0, 0,
+                          10, 0, 8, 0, 0, 0,
+                          3, 0, 9, 0, 0, 0};
     
     for (int i = 0; i < 6; ++i) {
       edgeList[i] = new int[6];
@@ -55,7 +54,7 @@ bool TestTask()
         }
     }
       
-    solution =testVar.Important (n, edgeList, scores);
+    solution = Important(n, edgeList, scores);
 
     for(int i = 0; i<6;i++){
       for(int j=0; j<6;j++){
