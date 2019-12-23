@@ -3,6 +3,7 @@ import sys
 import datetime
 import time
 import threading
+import hashlib
 
 def calculateCheckSum(data):
     hash_md5 = hashlib.md5()
@@ -11,7 +12,9 @@ def calculateCheckSum(data):
 
 def sender(destinationIp,destPort):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.settimeout(0.5)
+    ackSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    ackSocket.bind(("10.10.3.1", 1044))
+    ackSocket.settimeout(0.5)
   
     with open("input.txt") as f:
         lastAck = 0
@@ -21,8 +24,8 @@ def sender(destinationIp,destPort):
 
             if(not resendRequired):     
                 readData = f.read(4500)
-                numOfPackets = readData/900
-                counter = couter + 1
+                numOfPackets = len(readData)/900
+                counter = counter + 1
                 if not readData:
                     break
 
@@ -40,7 +43,7 @@ def sender(destinationIp,destPort):
 
             while 1:
                 try:
-                    ack = s.recvfrom(60)
+                    ack = ackSocket.recvfrom(60)
                 except socket.timeout as e:
                     if lastAck != counter*5:
                         resendRequired = True
@@ -48,8 +51,12 @@ def sender(destinationIp,destPort):
                     else :
                         resendRequired = False
 
-                ack = ack.strip()
+                ack = ack[0].strip()
                 parsedAck = ack.split(':')
+                print(parsedAck)
+                if lastAck == counter*5:
+                    resendRequired = False
+                    break
                 if int(lastAck +1) == int(parsedAck[1]):
                     lastAck = lastAck +1
                     resendRequired = False

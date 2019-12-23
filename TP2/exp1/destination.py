@@ -3,6 +3,7 @@ import time
 import math
 import threading
 import datetime
+import hashlib
 
 def calculateCheckSum(data):
     hash_md5 = hashlib.md5()
@@ -13,6 +14,8 @@ def listener(hostIp,hostPort):
 	totalData = ''
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	s.bind((hostIp, hostPort))
+	ackSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
 
 	lastReceivedPacketSeqNo = 0;
 
@@ -20,23 +23,23 @@ def listener(hostIp,hostPort):
 		packet = s.recvfrom(1000)
 
 		if packet:
-			header = packet[0][0:100]
-			payloadData = packet[0][100:]
+			header = packet[0][:99]
+			payloadData = packet[0][99:]
 
 			checkSum = calculateCheckSum(str(payloadData))
 
-			header.strip()
+			header = header.strip()
 			parsedHeader = header.split('#')
 			currentSeqNo = parsedHeader[0]
-			if str(parsedHeader[1]) == checkSum:
-				if currentSeqNo == lastReceivedPacketSeqNo +1:
+			if str(parsedHeader[1]) == str(checkSum):
+				if int(currentSeqNo) == lastReceivedPacketSeqNo +1:
+					print("ehehehehehehehehe+++++++++++++++++++++++++++")
 					lastReceivedPacketSeqNo = lastReceivedPacketSeqNo +1
 					totalData += payloadData
 			
 			ack = "ACK:" + str(lastReceivedPacketSeqNo)
 			ackWithPadding = ack + (60-len(ack))*" "
-
-			s.sendto(ackWithPadding,packet[1])
+			ackSocket.sendto(ackWithPadding,("10.10.7.2", 3044))
 
 	s.close()
 
