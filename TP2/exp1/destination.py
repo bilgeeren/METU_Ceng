@@ -35,9 +35,10 @@ def listener(hostIp,hostPort):
 				if int(currentSeqNo) == lastReceivedPacketSeqNo +1:
 					lastReceivedPacketSeqNo = lastReceivedPacketSeqNo +1
 					totalData += payloadData
-			
+					print("received " + currentSeqNo)
 			ack = "ACK:" + str(lastReceivedPacketSeqNo)
 			ackWithPadding = ack + (60-len(ack))*" "
+			print("sending acknowledge of " + str(lastReceivedPacketSeqNo))
 			ackSocket.sendto(ackWithPadding,("10.10.7.2", 3044))
 
 	s.close()

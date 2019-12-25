@@ -36,8 +36,8 @@ def sender(destinationIp,destPort):
                 checkSumData = calculateCheckSum(payloadData)
                 header = str(lastAck + i - (lastAck%5)) + "#" + checkSumData
                 padding = 99 - len(header)
-
                 packet = header + padding*" " + payloadData
+                print("sending " + str(lastAck + i - (lastAck%5)))
                 s.sendto(packet,(destinationIp, destPort))
           
 
@@ -53,16 +53,18 @@ def sender(destinationIp,destPort):
 
                 ack = ack[0].strip()
                 parsedAck = ack.split(':')
-                print(parsedAck)
+                print(str(parsedAck) + " successfully sent")
+                print(lastAck)
+                print(counter)
                 if lastAck == counter*5:
                     resendRequired = False
                     break
-                if int(lastAck +1) == int(parsedAck[1]):
-                    lastAck = lastAck +1
+                if int(lastAck +1) <= int(parsedAck[1]):
+                    lastAck = int(parsedAck[1])
                     resendRequired = False
                 else:
                     resendRequired = True
-                    break
+                    break   
 
 
     s.close()
