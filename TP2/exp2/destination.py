@@ -5,12 +5,15 @@ import threading
 import datetime
 import hashlib
 
+firstPackets = ""
+secondPackets = ""
+
 def calculateCheckSum(data):
     hash_md5 = hashlib.md5()
     hash_md5.update(data)
     return hash_md5.hexdigest()
 
-def listener(hostIp,hostPort):
+def listener(hostIp,hostPort,routerNo):
 	totalData = ''
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	s.bind((hostIp, hostPort))
@@ -18,10 +21,9 @@ def listener(hostIp,hostPort):
 
 
 	lastReceivedPacketSeqNo = 0
-
+	tempPayload = ""
 	while 1:
 		packet = s.recvfrom(1000)
-
 		if packet:
 			header = packet[0][:99]
 			payloadData = packet[0][99:]
@@ -31,15 +33,26 @@ def listener(hostIp,hostPort):
 			header = header.strip()
 			parsedHeader = header.split('#')
 			currentSeqNo = parsedHeader[0]
+
 			if str(parsedHeader[1]) == str(checkSum):
 				if int(currentSeqNo) == lastReceivedPacketSeqNo +1:
 					lastReceivedPacketSeqNo = lastReceivedPacketSeqNo +1
-					totalData += payloadData
-			
+					tempPayload = tempPayload + payloadData
+					if(int(currentSeqNo) % 5 == 0):
+						if routerNo == 1:
+							totalData = totalData + tempPayload 
+						else :
+							totalData = tempPayload + totalData
+						tempPayload = ""
+					print("received " + currentSeqNo)
 			ack = "ACK:" + str(lastReceivedPacketSeqNo)
 			ackWithPadding = ack + (60-len(ack))*" "
+			print("sending acknowledge of " + str(lastReceivedPacketSeqNo))
 			ackSocket.sendto(ackWithPadding,("10.10.7.2", 3044))
-
+	if routerNo == 1:
+		firstPackets = totalData
+	else :
+		secondPackets = totalData
 	s.close()
 
 
@@ -72,11 +85,16 @@ def avg_calc(ls):
     return mean
 
 if __name__ == '__main__':
-	listenR3 = threading.Thread(target=listener, args= ("10.10.7.1", 3043))
 
-	listenR3.start()
+	listenR1 = threading.Thread(target=listener, args= ("10.10.7.1", 3043,1))
+	listenR2 = threading.Thread(target=listener, args= ("10.10.7.1", 3043,2))
 
-	listenR3.join()
+	totalData = firstPackets + secondPackets
+
+	listenR1.start()
+	listenR2.start()
+	listenR1.join()
+	listenR2.join()
 
 	# total = 0
 	# for item in times:

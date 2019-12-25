@@ -1,75 +1,43 @@
 import socket
+import sys
+import datetime
 import time
 import threading
 
 
-sTimes = []
-dTimes = []
+def sourceListener(hostIp_listen, hostPort_listen):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.bind((hostIp_listen, hostPort_listen))
+    s2 = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-def listener(hostIp,hostPort):
-	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	s.bind((hostIp, hostPort))
+    while 1:
+        dataFromD = s.recvfrom(1000)
+        if dataFromD:
+            s2.sendto(dataFromD[0],  ("10.10.7.1", 3043))   
 
-	i=0
-	while i<100:
-		data = s.recvfrom(1024)
-		if data:
-			print(i)
-			s.sendto(b'received', data[1])
-			i+=1
-	s.close()
+    s2.close()
+    s.close()
 
+def destListener(hostIp_listen, hostPort_listen):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.bind((hostIp_listen, hostPort_listen))
+    s2 = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-def sender(destinationIp,destPort):
-	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	i = 0
-	while i<100:
-		start = time.time()
-		time.clock()
-		s.sendto(b"helo", (destinationIp, destPort))
-		while i<100:
-			data = s.recvfrom(1024)
-			if data:
-				end = time.time()
-				rtt = end-start
-				if(destPort == 4042):
-					sTimes.append(rtt)
-				if(destPort == 3042):
-					dTimes.append(rtt)
-				i+=1
-				break
-	s.close()
+    while 1:
+        dataFromD = s.recvfrom(60)
+        if dataFromD:
+            s2.sendto(dataFromD[0], ( "10.10.3.1", 1044))   
 
-def findAverage(l):
-	total = 0
-	for item in l:
-		total += item
-	return total/len(l)	
-
+    s2.close()
+    s.close()
 if __name__ == '__main__':
-	listenR3 = threading.Thread(target=listener, args=("10.10.6.1", 8080))  #need to keep record
-	listenR1 = threading.Thread(target=listener, args=("10.10.8.2", 4041))
-	sSender = threading.Thread(target=sender, args=("10.10.2.2", 4042))
-	destinationSender = threading.Thread(target=sender, args=("10.10.5.2", 3042)) #need to keep record
+    sListener = threading.Thread(target=sourceListener, args=("10.10.3.2", 1043))
+    dListener = threading.Thread(target=destListener, args=("10.10.7.2", 3044))
 
-	listenR3.start()
-	listenR1.start()
-	sSender.start()
-	destinationSender.start()
+    sListener.start()
+    dListener.start()
 
-	listenR3.join()
-	listenR1.join()
-	sSender.join()
-	destinationSender.join()
+    sListener.join()
+    dListener.join()
 
-	with open('link_costs.txt', 'w') as f:
-		f.write("router2-source\n")
-		for item in sTimes:
-			f.write("%s\n" % item)
-		f.write("avg = %s\n" % findAverage(sTimes))
-		f.write("router2-destination\n")
-		for item in dTimes:
-			f.write("%s\n" % item)
-		f.write("avg = %s\n" % findAverage(dTimes))
-
-	exit(0)
+    exit(0)
