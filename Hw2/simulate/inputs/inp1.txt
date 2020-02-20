@@ -1,0 +1,1 @@
+simulate [[O,H (Hunter 1 Expert 11 0 [S,E]),P (Prey 1 19 [S,E]),O],[H (Hunter 2 Newbie 30 1 [E,E]),O,T,P (Prey 2 25 [W,E])]]

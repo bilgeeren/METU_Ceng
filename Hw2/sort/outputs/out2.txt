@@ -1,0 +1,1 @@
+[Hunter {hID = 3, hlevel = Newbie, hEnergy = 90, hNumberOfCatches = 3, hActions = [W]},Hunter {hID = 13, hlevel = Expert, hEnergy = 90, hNumberOfCatches = 3, hActions = [N]}]

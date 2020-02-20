@@ -1,0 +1,1 @@
+simulate [[H (Hunter 1 Expert 100 0 [W,W,W,W,W,W]), P (Prey 1 100 [E,E,E,E,E,E]), T]]

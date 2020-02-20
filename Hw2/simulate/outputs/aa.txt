@@ -1,0 +1,102 @@
+input 4:
+simulate [[O,O,P (Prey 5 12 [S,N]),P (Prey 4 48 [S,E]),O],[H (Hunter 2 Intermediate 13 2 [E,E]),P (Prey 6 62 [W,N]),T,O,H (Hunter 1 Intermediate 98 5 [W,W])],[O,P (Prey 3 16 [E,N]),P (Prey 1 14 [N,N]),O,O]]
+
+simulate 
+[[O,O,P (Prey 5 12 [S,N]),P (Prey 4 48 [S,E]),O],
+[H (Hunter 2 Intermediate 13 2 [E,E]),P (Prey 6 62 [W,N]),T,O,H (Hunter 1 Intermediate 98 5 [W,W])],
+[O,P (Prey 3 16 [E,N]),P (Prey 1 14 [N,N]),O,O]]
+
+([(Prey {pID = 1, pEnergy = 14, pActions = [N,N]},(2,2)),
+(Prey {pID = 3, pEnergy = 16, pActions = [E,N]},(1,2)),
+(Prey {pID = 6, pEnergy = 62, pActions = [W,N]},(1,1)),
+(Prey {pID = 4, pEnergy = 48, pActions = [S,E]},(3,0)),
+(Prey {pID = 5, pEnergy = 12, pActions = [S,N]},(2,0))],
+[(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 98, hNumberOfCatches = 5, hActions = [W,W]},(4,1)),
+(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 13, hNumberOfCatches = 2, hActions = [E,E]},(0,1))])
+
+-----------------------------------------------
+[(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 12, hNumberOfCatches = 2, hActions = [E]},(1,1)),(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 100, hNumberOfCatches = 6, hActions = [W]},(3,1))],
+[(Prey {pID = 5, pEnergy = 1, pActions = [N]},(2,1)),(Prey {pID = 6, pEnergy = 61, pActions = [N]},(0,1)),(Prey {pID = 3, pEnergy = 15, pActions = [N]},(2,2)),(Prey {pID = 1, pEnergy = 3, pActions = [N]},(2,1))]
+
+
+([(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 12, hNumberOfCatches = 2, hActions = [E]},(1,1)),(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 100, hNumberOfCatches = 6, hActions = [W]},(3,1))],
+[(Prey {pID = 5, pEnergy = 1, pActions = [N]},(2,1)),
+(Prey {pID = 6, pEnergy = 61, pActions = [N]},(0,1)),
+(Prey {pID = 3, pEnergy = 15, pActions = [N]},(2,2)),
+(Prey {pID = 1, pEnergy = 3, pActions = [N]},(2,1))])
+
+[(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 100, hNumberOfCatches = 6, hActions = [W]},(3,1)),(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 12, hNumberOfCatches = 2, hActions = [E]},(1,1))]
+
+[(Prey {pID = 5, pEnergy = 1, pActions = [N]},(2,1)),(Prey {pID = 1, pEnergy = 3, pActions = [N]},(2,1)),(Prey {pID = 3, pEnergy = 15, pActions = [N]},(2,2)),(Prey {pID = 6, pEnergy = 61, pActions = [N]},(0,1))]
+
+----------------------------------------------------
+
+checkPoint_two2 [[O,O,P (Prey 5 12 [S,N]),P (Prey 4 48 [S,E]),O],[H (Hunter 2 Intermediate 13 2 [E,E]),P (Prey 6 62 [W,N]),T,O,H (Hunter 1 Intermediate 98 5 [W,W])],[O,P (Prey 3 16 [E,N]),P (Prey 1 14 [N,N]),O,O]] [(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 100, hNumberOfCatches = 6, hActions = [W]},(3,1)),(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 12, hNumberOfCatches = 2, hActions = [E]},(1,1))] [(Prey {pID = 5, pEnergy = 1, pActions = [N]},(2,1)),(Prey {pID = 1, pEnergy = 3, pActions = [N]},(2,1)),(Prey {pID = 3, pEnergy = 15, pActions = [N]},(2,2)),(Prey {pID = 6, pEnergy = 61, pActions = [N]},(0,1))]
+
+----------------------------------------------------
+
+[(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 99, hNumberOfCatches = 6, hActions = []},(2,1)),(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 11, hNumberOfCatches = 2, hActions = []},(2,1))]
+[(Prey {pID = 5, pEnergy = 0, pActions = []},(2,1)),(Prey {pID = 1, pEnergy = 0, pActions = []},(2,1)),(Prey {pID = 3, pEnergy = 4, pActions = []},(2,1)),(Prey {pID = 6, pEnergy = 60, pActions = []},(0,0))]
+
+[(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 99, hNumberOfCatches = 6, hActions = []},(2,1)),(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 11, hNumberOfCatches = 2, hActions = []},(2,1))]
+
+[(Prey {pID = 5, pEnergy = 0, pActions = []},(2,1)),(Prey {pID = 1, pEnergy = 0, pActions = []},(2,1)),(Prey {pID = 3, pEnergy = 4, pActions = []},(2,1)),(Prey {pID = 6, pEnergy = 60, pActions = []},(0,0))]
+
+
+upDate_hunters [(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 99, hNumberOfCatches = 6, hActions = []},(2,1)),(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 11, hNumberOfCatches = 2, hActions = []},(2,1))] [(Prey {pID = 5, pEnergy = 0, pActions = []},(2,1)),(Prey {pID = 1, pEnergy = 0, pActions = []},(2,1)),(Prey {pID = 3, pEnergy = 4, pActions = []},(2,1)),(Prey {pID = 6, pEnergy = 60, pActions = []},(0,0))] [] 
+
+
+--------------------------------------------------------
+
+output
+([(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 100, hNumberOfCatches = 8, hActions = []},(2,1)),
+(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 31, hNumberOfCatches = 3, hActions = []},(2,1))],
+[(Prey {pID = 6, pEnergy = 60, pActions = []},(0,0))])
+
+([(Hunter {hID = 1, hlevel = Intermediate, hEnergy = 100, hNumberOfCatches = 8, hActions = []},(2,1)),
+(Hunter {hID = 2, hlevel = Intermediate, hEnergy = 31, hNumberOfCatches = 3, hActions = []},(2,1))],
+[(Prey {pID = 6, pEnergy = 60, pActions = []},(0,0))])
+
+************************************
+
+input 9:
+
+simulate 
+[[O,H (Hunter 7 Newbie 40 0 [N,N,N,E,S,N,S,W,E,N,S,N,S,W,S,S,N,N,W,N,S,S,E,S,E]),O,O,O,P (Prey 24 90 [E,W,E,W,S,N,W,N,W,N,N,E,W,S,E,S,W,N,E,E,N,W,S,N,S]),O,O,O,O],
+[O,O,O,O,X,X,O,T,P (Prey 4 70 [S,W,E,N,W,E,W,S,S,E,W,S,W,N,W,W,W,W,W,S,W,E,E,E,E]),O],
+[O,X,X,O,T,O,P (Prey 5 100 [N,E,E,S,S,N,E,S,E,N,E,N,E,N,N,S,W,E,E,N,N,N,S,N,S]),O,O,O],
+[O,O,O,X,O,O,O,O,O,X],
+[O,O,O,O,O,O,O,O,O,O],
+[O,O,O,O,O,X,O,P (Prey 1 80 [E,S,S,W,W,W,E,W,N,W,W,W,E,W,S,W,N,N,N,W,N,S,E,S,E]),O,O],
+[O,H (Hunter 3 Expert 100 2 [S,E,S,E,S,N,E,W,N,S,E,W,W,S,N,S,N,N,N,W,W,S,W,W,N]),O,O,O,O,X,X,O,O],
+[O,O,T,X,X,O,O,O,T,O]]
+
+
+
+([(Hunter {hID = 3, hlevel = Expert, hEnergy = 86, hNumberOfCatches = 3, hActions = []},(0,4)),
+(Hunter {hID = 7, hlevel = Newbie, hEnergy = 15, hNumberOfCatches = 0, hActions = []},(1,3))],
+[(Prey {pID = 4, pEnergy = 25, pActions = []},(7,4)),
+(Prey {pID = 24, pEnergy = 65, pActions = []},(2,1)),
+(Prey {pID = 5, pEnergy = 65, pActions = []},(9,1))])
+
+output
+([(Hunter {hID = 3, hlevel = Expert, hEnergy = 86, hNumberOfCatches = 3, hActions = []},(0,4)),
+(Hunter {hID = 7, hlevel = Newbie, hEnergy = 15, hNumberOfCatches = 0, hActions = []},(1,3))],
+[(Prey {pID = 4, pEnergy = 25, pActions = []},(7,4)),
+(Prey {pID = 24, pEnergy = 65, pActions = []},(2,1)),
+(Prey {pID = 5, pEnergy = 65, pActions = []},(9,1))])
+
+
+***********************
+
+([(Hunter {hID = 1, hlevel = Expert, hEnergy = 100, hNumberOfCatches = 2, hActions = []},(1,2)),
+(Hunter {hID = 2, hlevel = Expert, hEnergy = 68, hNumberOfCatches = 2, hActions = []},(1,2)),
+(Hunter {hID = 3, hlevel = Expert, hEnergy = 28, hNumberOfCatches = 2, hActions = []},(1,2)),
+(Hunter {hID = 30, hlevel = Newbie, hEnergy = 100, hNumberOfCatches = 2, hActions = []},(4,2))],
+[(Prey {pID = 10, pEnergy = 13, pActions = []},(4,2))])
+
+([(Hunter {hID = 1, hlevel = Expert, hEnergy = 100, hNumberOfCatches = 2, hActions = []},(1,2)),
+(Hunter {hID = 2, hlevel = Expert, hEnergy = 68, hNumberOfCatches = 2, hActions = []},(1,2)),
+(Hunter {hID = 3, hlevel = Expert, hEnergy = 28, hNumberOfCatches = 2, hActions = []},(1,2)),
+(Hunter {hID = 30, hlevel = Newbie, hEnergy = 100, hNumberOfCatches = 2, hActions = []},(4,2))],
+[(Prey {pID = 10, pEnergy = 13, pActions = []},(4,2))])

@@ -1,0 +1,1 @@
+[Prey {pID = 4, pEnergy = 36, pActions = [N]},Prey {pID = 3, pEnergy = 36, pActions = [S]},Prey {pID = 2, pEnergy = 36, pActions = [E]},Prey {pID = 7, pEnergy = 56, pActions = [E]},Prey {pID = 13, pEnergy = 89, pActions = [W]},Prey {pID = 12, pEnergy = 90, pActions = [E]}]
