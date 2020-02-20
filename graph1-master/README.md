@@ -1,0 +1,1 @@
+Bu Projeyi Parçalayacağız
