@@ -1,0 +1,76 @@
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 65, AID: 0, Miner created.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 95, AID: 1, Miner started mining Iron, current capacity: 0/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 0, FID: 0, time stamp: 74, AID: 4, Transporter created.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 92, AID: 9, Smelter created.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 266, AID: 2, Miner finished mining Iron, current capacity: 1/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 433, AID: 1, Miner started mining Iron, current capacity: 1/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 600, AID: 2, Miner finished mining Iron, current capacity: 2/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 768, AID: 1, Miner started mining Iron, current capacity: 2/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 951, AID: 2, Miner finished mining Iron, current capacity: 3/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 1122, AID: 1, Miner started mining Iron, current capacity: 3/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 1306, AID: 2, Miner finished mining Iron, current capacity: 4/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 1492, AID: 1, Miner started mining Iron, current capacity: 4/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 1662, AID: 2, Miner finished mining Iron, current capacity: 5/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 1849, AID: 1, Miner started mining Iron, current capacity: 5/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 2032, AID: 2, Miner finished mining Iron, current capacity: 6/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 2219, AID: 1, Miner started mining Iron, current capacity: 6/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 2402, AID: 2, Miner finished mining Iron, current capacity: 7/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 2590, AID: 1, Miner started mining Iron, current capacity: 7/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 2774, AID: 2, Miner finished mining Iron, current capacity: 8/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 2959, AID: 1, Miner started mining Iron, current capacity: 8/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 3142, AID: 2, Miner finished mining Iron, current capacity: 9/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 3327, AID: 1, Miner started mining Iron, current capacity: 9/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 3510, AID: 2, Miner finished mining Iron, current capacity: 10/20.
+ThreadID: 00a7c9e0387f0000, MID: 1, TID: 0, SID: 0, FID: 0, time stamp: 3697, AID: 3, Miner stopped mining Iron, current capacity: 10/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 3718, AID: 5, Transporter is traveling to miner.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 4033, AID: 6, Transporter take Iron from miner, current fill 9/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 4190, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 4374, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 1/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 4559, AID: 5, Transporter is traveling to miner.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 4922, AID: 6, Transporter take Iron from miner, current fill 8/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 5107, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 5288, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 2/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 5476, AID: 5, Transporter is traveling to miner.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 5499, AID: 10, Smelter started producing Iron ingot. Waiting Ore 2/20.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 5668, AID: 11, Smelter finished producing Iron ingot. 1 ingots are produced.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 5766, AID: 6, Transporter take Iron from miner, current fill 7/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 5930, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 6094, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 1/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 6258, AID: 5, Transporter is traveling to miner.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 6578, AID: 6, Transporter take Iron from miner, current fill 6/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 6742, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 6905, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 2/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 7074, AID: 5, Transporter is traveling to miner.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 7096, AID: 10, Smelter started producing Iron ingot. Waiting Ore 2/20.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 7259, AID: 11, Smelter finished producing Iron ingot. 2 ingots are produced.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 7396, AID: 6, Transporter take Iron from miner, current fill 5/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 7559, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 7722, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 1/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 7885, AID: 5, Transporter is traveling to miner.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 8204, AID: 6, Transporter take Iron from miner, current fill 4/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 8366, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 8529, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 2/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 8695, AID: 5, Transporter is traveling to miner.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 8717, AID: 10, Smelter started producing Iron ingot. Waiting Ore 2/20.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 8881, AID: 11, Smelter finished producing Iron ingot. 3 ingots are produced.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 9016, AID: 6, Transporter take Iron from miner, current fill 3/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 9180, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 9341, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 1/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 9501, AID: 5, Transporter is traveling to miner.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 9819, AID: 6, Transporter take Iron from miner, current fill 2/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 9985, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 10149, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 2/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 10317, AID: 5, Transporter is traveling to miner.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 10339, AID: 10, Smelter started producing Iron ingot. Waiting Ore 2/20.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 10506, AID: 11, Smelter finished producing Iron ingot. 4 ingots are produced.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 10639, AID: 6, Transporter take Iron from miner, current fill 1/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 10802, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 10967, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 1/20.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 11132, AID: 5, Transporter is traveling to miner.
+ThreadID: 009749e0387f0000, MID: 1, TID: 1, SID: 0, FID: 0, time stamp: 11454, AID: 6, Transporter take Iron from miner, current fill 0/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 11625, AID: 5, Transporter is traveling to smelter, carrying: Iron.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 1, FID: 0, time stamp: 11789, AID: 7, Transporter put Iron ore to smelter. Waiting Ore 2/20.
+ThreadID: 009749e0387f0000, MID: 0, TID: 1, SID: 0, FID: 0, time stamp: 11958, AID: 8, Transporter stopped.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 11982, AID: 10, Smelter started producing Iron ingot. Waiting Ore 2/20.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 12146, AID: 11, Smelter finished producing Iron ingot. 5 ingots are produced.
+ThreadID: 0087c9df387f0000, MID: 0, TID: 0, SID: 1, FID: 0, time stamp: 5000850, AID: 12, Smelter stopped. 5 Iron ingots are produced.
